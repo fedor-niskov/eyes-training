@@ -10,7 +10,7 @@ class App(Tk):
 
         super(App, self).__init__()
         self.title('Program')
-        self.attributes('-zoomed', True)
+        self.state('zoomed')
 
         self.columnconfigure(index=0, weight=1)
         self.rowconfigure(index=0, weight=1)
@@ -142,6 +142,8 @@ class App(Tk):
             self.coord_modify(self.controls.entry_x2, +0.25)
 
         elif k == 'KP_BEGIN':
+            self.coord_modify(self.controls.entry_y2, -0.25)
+        elif k == 'CLEAR':
             self.coord_modify(self.controls.entry_y2, -0.25)
 
         self.paint()
