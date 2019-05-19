@@ -10,13 +10,6 @@ class App(Tk):
 
         super(App, self).__init__()
         self.title('Program')
-        screenwidth = self.winfo_screenwidth()
-        screenheight = self.winfo_screenheight()
-        width = int(screenwidth * 0.85)
-        height = int(screenheight * 0.85)
-        x_center = int(screenwidth * 0.075)
-        y_center = int(screenheight * 0.075)
-        self.geometry('{}x{}+{}+{}'.format(width, height, x_center, y_center))
 
         self.columnconfigure(index=0, weight=1)
         self.rowconfigure(index=0, weight=1)
@@ -84,6 +77,7 @@ class App(Tk):
 
         self.bind('<Key>', self.key_handler)
         self.bind('<Button-1>', self.unfocus)
+        self.bind('<Configure>', lambda event: self.paint())
 
         self.paint()
 
