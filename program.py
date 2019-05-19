@@ -69,7 +69,7 @@ class App(Tk):
         contr.entry_y1.insert(0, '+00.00')
         contr.entry_x2.insert(0, '+10.00')
         contr.entry_y2.insert(0, '+00.00')
-        contr.entry_r.insert(0, '5')
+        contr.entry_r.insert(0, '9')
         contr.entry_ppi.insert(0, '130')
 
         self.update()
