@@ -10,7 +10,9 @@ class App(Tk):
 
         super(App, self).__init__()
         self.title('Program')
-        self.state('zoomed')
+        screenwidth = self.winfo_screenwidth()
+        screenheight = self.winfo_screenheight()
+        self.geometry('{}x{}+0+0'.format(screenwidth, screenheight))
 
         self.columnconfigure(index=0, weight=1)
         self.rowconfigure(index=0, weight=1)
