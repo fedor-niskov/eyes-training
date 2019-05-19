@@ -12,7 +12,11 @@ class App(Tk):
         self.title('Program')
         screenwidth = self.winfo_screenwidth()
         screenheight = self.winfo_screenheight()
-        self.geometry('{}x{}+0+0'.format(screenwidth, screenheight))
+        width = int(screenwidth * 0.85)
+        height = int(screenheight * 0.85)
+        x_center = int(screenwidth * 0.075)
+        y_center = int(screenheight * 0.075)
+        self.geometry('{}x{}+{}+{}'.format(width, height, x_center, y_center))
 
         self.columnconfigure(index=0, weight=1)
         self.rowconfigure(index=0, weight=1)
