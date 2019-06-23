@@ -104,47 +104,49 @@ class App(Tk):
 
         k = event.keysym.upper()
         contr = self.controls
+        
+        STEP = 0.10
 
         if   k == 'W':
-            self.coord_modify(self.controls.entry_y1, +0.25)
+            self.coord_modify(self.controls.entry_y1, +STEP)
         elif k == 'A':
-            self.coord_modify(self.controls.entry_x1, -0.25)
+            self.coord_modify(self.controls.entry_x1, -STEP)
         elif k == 'S':
-            self.coord_modify(self.controls.entry_y1, -0.25)
+            self.coord_modify(self.controls.entry_y1, -STEP)
         elif k == 'D':
-            self.coord_modify(self.controls.entry_x1, +0.25)
+            self.coord_modify(self.controls.entry_x1, +STEP)
 
         elif k == 'K':
-            self.coord_modify(self.controls.entry_y1, +0.25)
+            self.coord_modify(self.controls.entry_y1, +STEP)
         elif k == 'H':
-            self.coord_modify(self.controls.entry_x1, -0.25)
+            self.coord_modify(self.controls.entry_x1, -STEP)
         elif k == 'J':
-            self.coord_modify(self.controls.entry_y1, -0.25)
+            self.coord_modify(self.controls.entry_y1, -STEP)
         elif k == 'L':
-            self.coord_modify(self.controls.entry_x1, +0.25)
+            self.coord_modify(self.controls.entry_x1, +STEP)
 
         elif k == 'UP':
-            self.coord_modify(self.controls.entry_y2, +0.25)
+            self.coord_modify(self.controls.entry_y2, +STEP)
         elif k == 'LEFT':
-            self.coord_modify(self.controls.entry_x2, -0.25)
+            self.coord_modify(self.controls.entry_x2, -STEP)
         elif k == 'DOWN':
-            self.coord_modify(self.controls.entry_y2, -0.25)
+            self.coord_modify(self.controls.entry_y2, -STEP)
         elif k == 'RIGHT':
-            self.coord_modify(self.controls.entry_x2, +0.25)
+            self.coord_modify(self.controls.entry_x2, +STEP)
 
         elif k == 'KP_UP':
-            self.coord_modify(self.controls.entry_y2, +0.25)
+            self.coord_modify(self.controls.entry_y2, +STEP)
         elif k == 'KP_LEFT':
-            self.coord_modify(self.controls.entry_x2, -0.25)
+            self.coord_modify(self.controls.entry_x2, -STEP)
         elif k == 'KP_DOWN':
-            self.coord_modify(self.controls.entry_y2, -0.25)
+            self.coord_modify(self.controls.entry_y2, -STEP)
         elif k == 'KP_RIGHT':
-            self.coord_modify(self.controls.entry_x2, +0.25)
+            self.coord_modify(self.controls.entry_x2, +STEP)
 
         elif k == 'KP_BEGIN':
-            self.coord_modify(self.controls.entry_y2, -0.25)
+            self.coord_modify(self.controls.entry_y2, -STEP)
         elif k == 'CLEAR':
-            self.coord_modify(self.controls.entry_y2, -0.25)
+            self.coord_modify(self.controls.entry_y2, -STEP)
 
         self.paint()
 
