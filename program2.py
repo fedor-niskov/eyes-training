@@ -191,7 +191,7 @@ class App(Tk):
         y0 = y0m * ppm
         x = x0 + width / 2
         y = -y0 + height / 2
-        return x, y
+        return round(x), round(y)
 
 
     def paint(self):
@@ -214,7 +214,7 @@ class App(Tk):
             x2p, y2p = self.convert_coord(x2, y2, w, h, ppm)
             x3p, y3p = self.convert_coord(x3, y3, w, h, ppm)
             x4p, y4p = self.convert_coord(x4, y4, w, h, ppm)
-            rp = r * ppm
+            rp = round(r * ppm)
             self.canvas.create_oval(x1p-rp, y1p-rp, x1p+rp, y1p+rp,
                                     fill='yellow', width=0)
             self.canvas.create_oval(x2p-rp, y2p-rp, x2p+rp, y2p+rp,
